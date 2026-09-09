@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuarios Admin | Olores que Matan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body class="has-background-light">
+
+    <nav class="navbar has-background-dark mb-6" role="navigation">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item has-text-white has-text-weight-bold" href="administrador.html">
+                    Olores que matan
+                </a>
+
+                <a class="navbar-burger has-text-white"
+                   role="button"
+                   aria-label="menu"
+                   aria-expanded="false"
+                   data-target="menuAdmin">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </a>
+
+            </div>
+
+            <div id="menuAdmin" class="navbar-menu">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item has-text-white" href="administrador.html">
+                        Dashboard
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="usuarios.html">
+                        Usuarios
+                    </a>
+
+                </div>
+
+                <div class="navbar-end">
+
+                    <a class="navbar-item has-text-white" href="usuario.html">
+                        + Nuevo usuario
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="../index.html">
+                        Ir a tienda
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        <section class="section pt-2">
+
+            <div class="container">
+
+                <div class="mb-5">
+
+                    <h1 class="title is-2">
+                        Usuarios
+                    </h1>
+
+                    <p class="subtitle is-5">
+                        Administración de los usuarios registrados.
+                    </p>
+
+                </div>
+
+                <div class="mb-5">
+
+                    <a class="button is-dark" href="usuario.html">
+                        + Nuevo usuario
+                    </a>
+
+                </div>
+
+                <div class="box">
+
+                    <div class="table-container">
+
+                        <table class="table is-fullwidth is-hoverable">
+
+                            <thead>
+
+                                <tr>
+                                    <th>RUN</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Rol</th>
+                                    <th>Comuna</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="tablaUsuarios"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/registro.js"></script>
+    <script src="../scripts/validaciones.js"></script>
+    <script src="../scripts/admin.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.getElementById('menuAdmin');
+
+            burger.addEventListener('click', () => {
+
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+
+                burger.setAttribute(
+                    'aria-expanded',
+                    burger.classList.contains('is-active')
+                );
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo producto | Olores que matan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+
+</head>
+
+<body class="has-background-light">
+
+    <nav class="navbar admin-navbar" role="navigation">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item admin-brand" href="administrador.html">
+                    Olores que matan
+                </a>
+
+            </div>
+
+            <div class="navbar-menu is-active">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item admin-link" href="administrador.html">
+                        Dashboard
+                    </a>
+
+                    <a class="navbar-item admin-link" href="productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item admin-link" href="usuarios.html">
+                        Usuarios
+                    </a>
+
+                </div>
+
+                <div class="navbar-end">
+
+                    <a class="navbar-item admin-link" href="../index.html">
+                        Volver a la tienda
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main class="column admin-main">
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="columns is-centered">
+
+                    <div class="column is-12-mobile is-8-tablet is-7-desktop">
+
+                        <form
+                            id="formProducto"
+                            onsubmit="guardarProductoAdmin(event)"
+                            class="box"
+                        >
+
+                            <h1 class="title is-2 has-text-centered">
+                                Nuevo / Editar producto
+                            </h1>
+
+                            <input type="hidden" name="id">
+
+                            <div class="field">
+
+                                <label class="label" for="codigo">
+                                    Código producto
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="codigo"
+                                        name="codigo"
+                                        type="text"
+                                        minlength="3"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="nombre">
+                                    Nombre
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="nombre"
+                                        name="nombre"
+                                        type="text"
+                                        maxlength="100"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="descripcion">
+                                    Descripción
+                                </label>
+
+                                <div class="control">
+
+                                    <textarea
+                                        class="textarea"
+                                        id="descripcion"
+                                        name="descripcion"
+                                        maxlength="500"
+                                    ></textarea>
+
+                                </div>
+
+                                <p class="help">
+                                    Máximo 500 caracteres
+                                </p>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="precio">
+                                    Precio
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="precio"
+                                        name="precio"
+                                        type="number"
+                                        min="0"
+                                        step="0.01"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="stock">
+                                    Stock
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="stock"
+                                        name="stock"
+                                        type="number"
+                                        min="0"
+                                        step="1"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="stockCritico">
+                                    Stock crítico
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="stockCritico"
+                                        name="stockCritico"
+                                        type="number"
+                                        min="0"
+                                        step="1"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="categoria">
+                                    Categoría
+                                </label>
+
+                                <div class="control">
+
+                                    <div class="select is-fullwidth">
+
+                                        <select
+                                            id="categoria"
+                                            name="categoria"
+                                            required
+                                        >
+
+                                            <option value="">
+                                                Seleccione una categoría
+                                            </option>
+
+                                            <option value="Femenino">
+                                                Femenino
+                                            </option>
+
+                                            <option value="Masculino">
+                                                Masculino
+                                            </option>
+
+                                            <option value="Unisex">
+                                                Unisex
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="imagen">
+                                    Imagen
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        id="imagen"
+                                        name="imagen"
+                                        type="text"
+                                        placeholder="../img/perfumes/perfume1.jpg"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field is-grouped is-grouped-centered mt-5">
+
+                                <div class="control">
+
+                                    <button
+                                        type="submit"
+                                        class="button"
+                                        style="background-color:#f75c93;color:white;"
+                                    >
+                                        Guardar producto
+                                    </button>
+
+                                </div>
+
+                                <div class="control">
+
+                                    <a
+                                        href="productos.html"
+                                        class="button is-light"
+                                    >
+                                        Cancelar
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/productos.js"></script>
+    <script src="../scripts/admin.js"></script>
+
+</body>
+
+</html>

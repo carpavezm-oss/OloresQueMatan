@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nuevo usuario | Olores que matan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body class="has-background-light">
+
+    <nav class="navbar has-background-dark mb-6" role="navigation">
+
+        <div class="container">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item has-text-white has-text-weight-bold" href="administrador.html">
+                    Olores que matan
+                </a>
+
+                <a class="navbar-burger has-text-white"
+                   role="button"
+                   aria-label="menu"
+                   aria-expanded="false"
+                   data-target="menuAdmin">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+
+            </div>
+
+            <div id="menuAdmin" class="navbar-menu">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item has-text-white" href="administrador.html">
+                        Dashboard
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="usuarios.html">
+                        Usuarios
+                    </a>
+
+                </div>
+
+                <div class="navbar-end">
+
+                    <a class="navbar-item has-text-white" href="../index.html">
+                        Ir a tienda
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <main>
+
+        <section class="section pt-2">
+
+            <div class="container">
+
+                <div class="columns is-centered">
+
+                    <div class="column is-8-tablet is-7-desktop">
+
+                        <div class="box">
+
+                            <h1 class="title is-2 has-text-centered">
+                                Crear usuario
+                            </h1>
+
+                            <form onsubmit="validarUsuario(event)">
+
+                                <div class="field">
+
+                                    <label class="label" for="run">
+                                        RUN
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="run"
+                                            name="run"
+                                            type="text"
+                                            required
+                                            maxlength="9"
+                                            placeholder="19011022K"
+                                        >
+
+                                    </div>
+
+                                    <p class="help">
+                                        Ejemplo: 19011022K
+                                    </p>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="nombre">
+                                        Nombre
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="nombre"
+                                            name="nombre"
+                                            type="text"
+                                            required
+                                            maxlength="50"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="apellidos">
+                                        Apellidos
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="apellidos"
+                                            name="apellidos"
+                                            type="text"
+                                            required
+                                            maxlength="100"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="correo">
+                                        Correo electrónico
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="correo"
+                                            name="correo"
+                                            type="email"
+                                            required
+                                            maxlength="100"
+                                            placeholder="ejemplo@gmail.com"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="fechaNacimiento">
+                                        Fecha de nacimiento
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="fechaNacimiento"
+                                            name="fechaNacimiento"
+                                            type="date"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="tipoUsuario">
+                                        Tipo de usuario
+                                    </label>
+
+                                    <div class="control">
+
+                                        <div class="select is-fullwidth">
+
+                                            <select
+                                                id="tipoUsuario"
+                                                name="tipoUsuario"
+                                                required
+                                            >
+
+                                                <option value="">
+                                                    Seleccione
+                                                </option>
+
+                                                <option value="Administrador">
+                                                    Administrador
+                                                </option>
+
+                                                <option value="Cliente">
+                                                    Cliente
+                                                </option>
+
+                                                <option value="Vendedor">
+                                                    Vendedor
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="region">
+                                        Región
+                                    </label>
+
+                                    <div class="control">
+
+                                        <div class="select is-fullwidth">
+
+                                            <select
+                                                id="region"
+                                                name="region"
+                                                required
+                                            >
+
+                                                <option value="">
+                                                    Seleccione una región
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="comuna">
+                                        Comuna
+                                    </label>
+
+                                    <div class="control">
+
+                                        <div class="select is-fullwidth">
+
+                                            <select
+                                                id="comuna"
+                                                name="comuna"
+                                                required
+                                            >
+
+                                                <option value="">
+                                                    Seleccione una comuna
+                                                </option>
+
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field">
+
+                                    <label class="label" for="direccion">
+                                        Dirección
+                                    </label>
+
+                                    <div class="control">
+
+                                        <input
+                                            class="input"
+                                            id="direccion"
+                                            name="direccion"
+                                            type="text"
+                                            required
+                                            maxlength="300"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                                <div class="field is-grouped is-grouped-centered mt-5">
+
+                                    <div class="control">
+
+                                        <button
+                                            type="submit"
+                                            class="button is-dark"
+                                        >
+                                            Guardar usuario
+                                        </button>
+
+                                    </div>
+
+                                    <div class="control">
+
+                                        <a
+                                            href="usuarios.html"
+                                            class="button is-light"
+                                        >
+                                            Cancelar
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/registro.js"></script>
+    <script src="../scripts/validaciones.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.getElementById('menuAdmin');
+
+            burger.addEventListener('click', () => {
+
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+
+                burger.setAttribute(
+                    'aria-expanded',
+                    burger.classList.contains('is-active')
+                );
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

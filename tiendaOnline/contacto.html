@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | Olores que Matan</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body>
+
+    <header class="navbar-negro">
+
+        <nav class="navbar container" role="navigation">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item" href="../index.html">
+                    Olores que Matan
+                </a>
+
+            </div>
+
+            <div class="navbar-menu is-active">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item" href="../index.html">
+                        Inicio
+                    </a>
+
+                    <a class="navbar-item" href="productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item" href="nosotros.html">
+                        Nosotros
+                    </a>
+
+                    <a class="navbar-item" href="blogs.html">
+                        Blog
+                    </a>
+
+                    <a class="navbar-item" href="contacto.html">
+                        Contacto
+                    </a>
+
+                    <a class="navbar-item" href="carrito.html">
+                        🛒 <span id="contadorCarrito">0</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="has-text-centered mb-6">
+
+                    <h1 class="title is-2">
+                        Contáctanos
+                    </h1>
+
+                    <p class="subtitle is-5">
+                        Estamos aquí para ayudarte.
+                    </p>
+
+                </div>
+
+                <div class="columns is-centered">
+
+                    <div class="column is-6">
+
+                        <form
+                            class="formulario"
+                            onsubmit="validarContacto(event)">
+
+                            <div class="field">
+
+                                <label class="label">
+                                    Nombre
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="nombre"
+                                        maxlength="100"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label">
+                                    Correo
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="correo"
+                                        type="email"
+                                        maxlength="100"
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label">
+                                    Comentario
+                                </label>
+
+                                <div class="control">
+
+                                    <textarea
+                                        class="textarea"
+                                        name="comentario"
+                                        maxlength="500"
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+                                <p class="help">
+                                    Máximo 500 caracteres
+                                </p>
+
+                            </div>
+
+                            <div class="field">
+
+                                <div class="control">
+
+                                    <button
+                                        class="button contacto-boton"
+                                        type="submit">
+                                        Enviar mensaje
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Olores que Matan</p>
+
+    </footer>
+
+    <script src="../scripts/validaciones.js"></script>
+
+</body>
+
+</html>

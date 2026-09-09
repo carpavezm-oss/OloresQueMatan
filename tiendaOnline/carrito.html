@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrito | Olores que Matan</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="../estilos/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar container" role="navigation">
+
+            <div class="navbar-brand">
+
+                <a class="navbar-item" href="../index.html">
+                    Olores que Matan
+                </a>
+
+            </div>
+
+            <div class="navbar-menu is-active">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item" href="../index.html">
+                        Inicio
+                    </a>
+
+                    <a class="navbar-item" href="productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item" href="nosotros.html">
+                        Nosotros
+                    </a>
+
+                    <a class="navbar-item" href="blogs.html">
+                        Blog
+                    </a>
+
+                    <a class="navbar-item" href="contacto.html">
+                        Contacto
+                    </a>
+
+                    <a class="navbar-item" href="carrito.html">
+                        🛒 <span id="contadorCarrito">0</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="has-text-centered mb-6">
+
+                    <h1 class="title is-2">
+                        Carrito de compra
+                    </h1>
+
+                    <p class="subtitle is-5">
+                        Revisa los productos que has seleccionado.
+                    </p>
+
+                </div>
+
+                <div class="columns is-variable is-6">
+
+                    <div class="column is-8">
+
+                        <div class="box carrito-lista">
+
+                            <h2 class="title is-4">
+                                Productos
+                            </h2>
+
+                            <div id="listaCarrito"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column is-4">
+
+                        <aside class="box carrito-resumen">
+
+                            <h2 class="title is-4">
+                                Resumen
+                            </h2>
+
+                            <div id="resumenCarrito"></div>
+
+                        </aside>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Olores que Matan</p>
+
+    </footer>
+
+    <script src="../scripts/productos.js"></script>
+    <script src="../scripts/carrito.js"></script>
+
+</body>
+
+</html>

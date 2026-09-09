@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro | Olores que Matan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body class="has-background-light">
+
+    <main>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="has-text-centered mb-5">
+
+                    <a href="../index.html" class="has-text-weight-semibold">
+                        ← Home
+                    </a>
+
+                </div>
+
+                <div class="columns is-centered">
+
+                    <div class="column is-12-mobile is-8-tablet is-6-desktop">
+
+                        <form
+                            onsubmit="validarUsuario(event)"
+                            class="box">
+
+                            <h1 class="title is-2 has-text-centered titulo-registro">
+                                Crear cuenta
+                            </h1>
+
+                            <div class="field">
+
+                                <label class="label" for="run">
+                                    RUN
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="run"
+                                        id="run"
+                                        required
+                                        maxlength="9"
+                                        placeholder="19011022K">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="nombre">
+                                    Nombre
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="nombre"
+                                        id="nombre"
+                                        required
+                                        maxlength="50">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="apellidos">
+                                    Apellidos
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="apellidos"
+                                        id="apellidos"
+                                        required
+                                        maxlength="100">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="correo">
+                                    Correo
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="correo"
+                                        id="correo"
+                                        type="email"
+                                        required
+                                        maxlength="100">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="correoConfirmacion">
+                                    Confirmar Correo
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="correoConfirmacion"
+                                        id="correoConfirmacion"
+                                        type="email"
+                                        required
+                                        maxlength="100">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="contrasena">
+                                    Contraseña
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="contrasena"
+                                        id="contrasena"
+                                        type="password"
+                                        required
+                                        maxlength="100">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="contrasenaConfirmacion">
+                                    Confirmar Contraseña
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="contrasenaConfirmacion"
+                                        id="contrasenaConfirmacion"
+                                        type="password"
+                                        required
+                                        maxlength="100">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="fechaNacimiento">
+                                    Fecha de nacimiento
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="fechaNacimiento"
+                                        id="fechaNacimiento"
+                                        type="date">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="direccion">
+                                    Dirección
+                                </label>
+
+                                <div class="control">
+
+                                    <input
+                                        class="input"
+                                        name="direccion"
+                                        id="direccion"
+                                        required
+                                        maxlength="300">
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="region">
+                                    Región
+                                </label>
+
+                                <div class="control">
+
+                                    <div class="select is-fullwidth">
+
+                                        <select
+                                            id="region"
+                                            name="region"
+                                            required>
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="field">
+
+                                <label class="label" for="comuna">
+                                    Comuna
+                                </label>
+
+                                <div class="control">
+
+                                    <div class="select is-fullwidth">
+
+                                        <select
+                                            id="comuna"
+                                            name="comuna"
+                                            required>
+
+                                            <option value="">
+                                                Seleccione una comuna
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <input
+                                type="hidden"
+                                name="tipoUsuario"
+                                value="Cliente">
+
+                            <div class="field mt-5">
+
+                                <div class="control">
+
+                                    <button
+                                        type="submit"
+                                        class="button is-fullwidth"
+                                        style="background-color:#f75c93;color:white;">
+
+                                        Crear cuenta
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../scripts/registro.js"></script>
+    <script src="../scripts/validaciones.js"></script>
+
+</body>
+
+</html>

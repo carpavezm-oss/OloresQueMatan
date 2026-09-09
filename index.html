@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Olores que matan | Perfumería</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+
+    <div class="barra-envio has-text-centered py-2">
+        ¡ENVÍO GRATIS POR COMPRAS SOBRE $100.000 DENTRO DE LA R.M.!
+    </div>
+
+    <header>
+
+        <div class="has-text-centered">
+
+            <h1 class="title is-3 mb-0">
+                OLORES QUE MATAN
+            </h1>
+
+            <p class="is-size-7">
+                Perfumería y fragancias
+            </p>
+
+        </div>
+
+        <nav class="navbar is-transparent"
+            role="navigation"
+            aria-label="navegación principal">
+
+            <div class="navbar-menu is-active">
+
+                <div class="navbar-start">
+
+                    <a class="navbar-item" href="index.html">
+                        Inicio
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/productos.html">
+                        Productos
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/nosotros.html">
+                        Nosotros
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/blogs.html">
+                        Blog
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/contacto.html">
+                        Contacto
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/registro.html">
+                        Crear cuenta
+                    </a>
+
+                    <a class="navbar-item" href="tiendaOnline/login.html">
+                        Iniciar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a class="navbar-item" href="tiendaOnline/carrito.html">
+
+                🛒
+
+                <span id="contadorCarrito" class="tag is-danger ml-1">
+                    0
+                </span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="columns is-vcentered">
+
+                    <div class="column is-6">
+
+                        <p class="has-text-weight-semibold texto-rosa">
+                            DESCUBRE TU ESENCIA
+                        </p>
+
+                        <h1 class="title is-1">
+                            Tu aroma,<br>
+                            tu esencia.
+                        </h1>
+
+                        <p class="subtitle is-5">
+                            Descubre nuestra colección de perfumes
+                            cuidadosamente seleccionados para
+                            acompañarte en cada momento.
+                        </p>
+
+                        <a class="button is-medium boton-principal"
+                            href="tiendaOnline/productos.html">
+                            Ver perfumes
+                        </a>
+
+                    </div>
+
+                    <div class="column is-6">
+
+                        <figure class="image">
+
+                            <img
+                                class="imagen-redondeada"
+                                src="img/Bodegon_Vogue_4_202.webp"
+                                alt="Colección de perfumes Olores que matan"
+                            >
+
+                        </figure>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="has-text-centered mb-6">
+
+                    <p class="has-text-weight-semibold texto-rosa">
+                        NUESTRA SELECCIÓN
+                    </p>
+
+                    <h2 class="title is-2">
+                        Perfumes destacados
+                    </h2>
+
+                    <p class="subtitle is-6">
+                        Conoce algunas de nuestras fragancias
+                        favoritas.
+                    </p>
+
+                </div>
+
+                <div id="productosDestacados"
+                    class="columns is-multiline is-centered is-variable is-5">
+
+                </div>
+                <script>
+                    document.addEventListener('click', function(event) {
+
+                        const enlace = event.target.closest('.btn-detalle');
+
+                        if (!enlace) return;
+
+                        const href = enlace.getAttribute('href');
+
+                        if (href && href.startsWith('detalleProducto.html')) {
+                            event.preventDefault();
+                            window.location.href = 'tiendaOnline/' + href;
+                        }
+
+                    });
+                </script>
+
+                <div class="has-text-centered mt-5">
+
+                    <a class="button is-medium boton-principal"
+                        href="tiendaOnline/productos.html">
+                        Ver todos los productos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="columns is-vcentered">
+
+                    <div class="column is-6">
+
+                        <figure class="image">
+
+                            <img
+                                class="imagen-redondeada"
+                                src="img/perfumeria.jpg"
+                                alt="Perfumería Olores que matan"
+                            >
+
+                        </figure>
+
+                    </div>
+
+                    <div class="column is-6">
+
+                        <p class="has-text-weight-semibold texto-rosa">
+                            OLORES QUE MATAN
+                        </p>
+
+                        <h2 class="title is-2">
+                            Una fragancia puede
+                            contar tu historia.
+                        </h2>
+
+                        <p class="subtitle is-6">
+                            En Olores que matan creemos que cada
+                            persona tiene una esencia única.
+                            Por eso seleccionamos fragancias
+                            pensadas para acompañarte y expresar
+                            quién eres.
+                        </p>
+
+                        <a class="button is-medium boton-principal"
+                            href="tiendaOnline/nosotros.html">
+                            Conócenos
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="columns">
+
+                <div class="column">
+
+                    <h3 class="title is-5 has-text-white">
+                        Olores que matan
+                    </h3>
+
+                    <p>
+                        Perfumería y fragancias
+                        para expresar tu esencia.
+                    </p>
+
+                </div>
+
+                <div class="column">
+
+                    <h4 class="title is-6 has-text-white">
+                        Navegación
+                    </h4>
+
+                    <a href="index.html">
+                        Inicio
+                    </a>
+
+                    <br>
+
+                    <a href="tiendaOnline/productos.html">
+                        Productos
+                    </a>
+
+                    <br>
+
+                    <a href="tiendaOnline/nosotros.html">
+                        Nosotros
+                    </a>
+
+                    <br>
+
+                    <a href="tiendaOnline/blogs.html">
+                        Blog
+                    </a>
+
+                    <br>
+
+                    <a href="tiendaOnline/contacto.html">
+                        Contacto
+                    </a>
+
+                    <br>
+
+                    <a href="admin/administrador.html">
+                        Panel Administrativo
+                    </a>
+
+                </div>
+
+                <div class="column">
+
+                    <h4 class="title is-6 has-text-white">
+                        Atención
+                    </h4>
+
+                    <p>
+                        contacto@oloresquematan.cl
+                    </p>
+
+                    <p>
+                        +56 9 1234 5678
+                    </p>
+
+                    <p>
+                        Santiago, Chile
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="has-text-centered">
+
+                <p>
+                    © 2026 Olores que matan.
+                    Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="scripts/productos.js"></script>
+    <script src="scripts/carrito.js"></script>
+
+</body>
+
+</html>
