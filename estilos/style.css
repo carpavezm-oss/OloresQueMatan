@@ -56,7 +56,9 @@ header .navbar-start {
  
 header .navbar-item { 
     color: #292522 !important; 
-    background: #fff !important; 
+    background: #fff !important;
+    text-align: center; 
+
 } 
  
 header .navbar-item:hover { 
