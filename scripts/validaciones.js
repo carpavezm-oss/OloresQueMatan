@@ -52,7 +52,7 @@ function validarFormularioLogin(event) {
     if (valido) {
         localStorage.setItem('usuarioSesion', correo.value.trim());
         alert('Inicio de sesión correcto.');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     }
     return valido;
 }
