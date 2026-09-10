@@ -505,13 +505,14 @@ footer a:hover {
     color: #ffffff !important; 
 } 
  
-.admin-card .title {
+.admin-card a.title.is-5 {
     color: #000000 !important;
 }
 
-.admin-card .title:hover {
-    color: #f75c93 !important;
+.admin-card a.title.is-5:hover {
+    color: #000000 !important;
 }
+
 
 #productosDestacados {
     width: 100%;
