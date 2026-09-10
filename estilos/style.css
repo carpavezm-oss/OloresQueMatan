@@ -493,13 +493,7 @@ footer a:hover {
     } 
 } 
  
-.admin-card .title { 
-    color: #000 !important; 
-} 
- 
-.admin-card .title:hover { 
-    color: #ffffff !important; 
-} 
+
  
 #formProducto .title { 
     color: #ffffff !important; 
